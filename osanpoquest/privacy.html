@@ -28,49 +28,77 @@
   <h1>プライバシーポリシー</h1>
   <p class="app-name">Osanpo Quest（おさんぽクエスト）</p>
 
-  <h2>1. 収集する情報</h2>
-  <p>本アプリは、お客様の氏名・メールアドレスなどの個人情報を収集・保存・送信しません。アカウント登録やログインも不要です。獲得したカードやコメント・写真などのデータは、お使いの端末内にのみ保存されます。</p>
+  <h2>1. 基本方針</h2>
+  <p>本アプリはアカウント登録やログインが不要で、開発者はお客様の氏名・メールアドレスなどの個人情報を取得しません。開発者が運営するサーバーはなく、獲得したカード・メモ・写真・散歩の記録（開始地点・歩いた経路・到着地点）は、お使いの端末内にのみ保存されます。</p>
 
   <h2>2. 位置情報の利用について</h2>
-  <p>本アプリは、目的地までの距離や方角を計算するために端末の位置情報を使用します。位置情報はお使いの端末内でのみ利用され、外部サーバーや第三者に送信・保存されることはありません。目的地候補の検索には、現在地周辺の地点情報を OpenStreetMap（Overpass API）へ問い合わせます。</p>
+  <p>本アプリは、目的地の選定と、目的地までの距離・方角の計算のために端末の位置情報を使用します。</p>
+  <ul>
+    <li>目的地の候補を探すため、現在地の座標を次の外部サービスに送信し、周辺の地点情報を取得します：OpenStreetMap の Overpass API（overpass-api.de、および混雑時の公開ミラー maps.mail.ru）、Yahoo! JAPAN の YOLP ローカルサーチ API。</li>
+    <li>カードに市区町村名を表示するため、到着地点の座標を Apple の位置情報サービスで住所に変換します。地図の表示には Apple マップを使用します。</li>
+  </ul>
+  <p>これらの送信は検索・変換の処理のためだけに行われ、開発者が位置情報を受け取ったり保存したりすることはありません。各サービスでの取り扱いは、それぞれの提供者のポリシーに従います。散歩の経路は端末内にのみ記録されます。</p>
 
-  <h2>3. カメラ・写真について</h2>
-  <p>到着した場所のコレクションカードを作成するために、任意でカメラや写真ライブラリを使用します。撮影・選択した写真はお使いの端末内にのみ保存され、外部に送信されることはありません。</p>
+  <h2>3. スポット情報について</h2>
+  <p>目的地の説明文や写真を表示するため、Wikidata・Wikipedia・Wikimedia Commons にスポットの識別子を問い合わせます。この問い合わせにお客様の現在地は含まれません。</p>
 
-  <h2>4. 広告について</h2>
-  <p>本アプリは無料でご利用いただけ、Google AdMob によるバナー広告を表示します。AdMob は広告の配信・計測のために、広告識別子や端末・利用状況に関する情報を取得・利用することがあります。本アプリはトラッキング（IDFA）を用いた追跡は行わず、トラッキング許可の確認（ATT）も表示しません。AdMob におけるデータの取り扱いについては、<a href="https://policies.google.com/technologies/partner-sites">Google のポリシー</a>をご確認ください。</p>
+  <h2>4. カメラ・写真について</h2>
+  <p>到着した場所のコレクションカードを作成するために、任意でカメラや写真ライブラリを使用します。撮影・選択した写真は端末内にのみ保存され、外部に送信されることはありません。カード画像の共有・保存は、お客様が操作したときにのみ行われます。</p>
 
-  <h2>5. 第三者提供</h2>
-  <p>上記の広告配信を除き、本アプリが取得した情報を第三者へ提供することはありません。</p>
+  <h2>5. 広告について</h2>
+  <p>本アプリは Google AdMob によるバナー広告を表示します。AdMob は広告の配信・計測・分析のために、IP アドレスから推定するおおまかな位置情報、端末の識別子、広告の表示やタップなどの利用状況、診断情報を取得することがあります。本アプリはトラッキング許可の確認（ATT）を表示せず、広告識別子（IDFA）を用いたトラッキングは行いません。詳しくは <a href="https://policies.google.com/technologies/partner-sites">Google のポリシー</a>をご確認ください。プレミアムプランをご購入いただくと広告は表示されません。</p>
 
-  <h2>6. お問い合わせ</h2>
+  <h2>6. App 内課金について</h2>
+  <p>プレミアムプランの購入・復元は Apple の App Store を通じて行われます。開発者が支払い情報を受け取ることはありません。購入状態は端末内に保存されます。</p>
+
+  <h2>7. バックアップについて</h2>
+  <p>図鑑のバックアップは、お客様が操作したときにのみファイルとして書き出され、保存先はお客様が選択します。</p>
+
+  <h2>8. 第三者提供</h2>
+  <p>上記の外部サービスへの送信を除き、本アプリが取得した情報を第三者へ提供することはありません。</p>
+
+  <h2>9. お問い合わせ</h2>
   <p>本ポリシーに関するお問い合わせは、<a href="https://kunugi.notion.site/303e203271ae81019647e383c7215a36">お問い合わせページ</a>よりお願いいたします。</p>
 
-  <p class="updated">最終更新日：2026年6月28日</p>
+  <p class="updated">最終更新日：2026年11月22日</p>
 
   <hr>
 
   <h1>Privacy Policy</h1>
   <p class="app-name">Osanpo Quest</p>
 
-  <h2>1. Information We Collect</h2>
-  <p>This app does not collect, store, or transmit personal information such as your name or email address. No account or login is required. Data such as the cards you earn and any comments or photos are stored only on your device.</p>
+  <h2>1. Overview</h2>
+  <p>No account or login is required, and the developer does not obtain personal information such as your name or email address. The developer operates no servers. The cards you earn, your notes and photos, and your walk records (start point, route walked, and arrival point) are stored only on your device.</p>
 
   <h2>2. Use of Location</h2>
-  <p>The app uses your device's location to calculate the distance and direction to your destination. Location is used on your device only and is never sent to or stored on any external server or third party. To find candidate destinations, the app queries nearby points of interest from OpenStreetMap (Overpass API) based on your current location.</p>
+  <p>The app uses your device's location to pick a destination and to calculate the distance and direction to it.</p>
+  <ul>
+    <li>To find candidate destinations, the app sends your current coordinates to the following services to retrieve nearby places: the OpenStreetMap Overpass API (overpass-api.de, and the public mirror maps.mail.ru when the main server is busy) and the Yahoo! JAPAN YOLP Local Search API.</li>
+    <li>To show the city name on a card, the arrival coordinates are converted to an address using Apple's location services. Maps are displayed with Apple Maps.</li>
+  </ul>
+  <p>These requests are made only to perform the search or conversion; the developer never receives or stores your location. Each service handles data under its own provider's policy. Your walk route is recorded only on your device.</p>
 
-  <h2>3. Camera and Photos</h2>
-  <p>You may optionally use the camera or photo library to create a collection card for a place you reach. Photos you take or select are stored only on your device and are never transmitted externally.</p>
+  <h2>3. Place Information</h2>
+  <p>To show descriptions and photos of a destination, the app queries Wikidata, Wikipedia, and Wikimedia Commons using the place's identifier. These requests do not include your location.</p>
 
-  <h2>4. Advertising</h2>
-  <p>The app is free to use and displays banner ads via Google AdMob. AdMob may collect and use an advertising identifier and information about your device and usage to deliver and measure ads. The app does not perform IDFA-based tracking and does not show an App Tracking Transparency prompt. For how AdMob handles data, please see <a href="https://policies.google.com/technologies/partner-sites">Google's policy</a>.</p>
+  <h2>4. Camera and Photos</h2>
+  <p>You may optionally use the camera or photo library to create a collection card for a place you reach. Photos are stored only on your device and are never transmitted. Card images are shared or saved only when you choose to do so.</p>
 
-  <h2>5. Third Parties</h2>
-  <p>Other than the ad delivery described above, the app does not share any information it obtains with third parties.</p>
+  <h2>5. Advertising</h2>
+  <p>The app displays banner ads via Google AdMob. To deliver, measure, and analyze ads, AdMob may collect approximate location derived from your IP address, device identifiers, ad interactions such as views and taps, and diagnostic data. The app does not show an App Tracking Transparency prompt and does not track you using the advertising identifier (IDFA). For details, see <a href="https://policies.google.com/technologies/partner-sites">Google's policy</a>. Ads are not shown to Premium Plan users.</p>
 
-  <h2>6. Contact</h2>
+  <h2>6. In-App Purchase</h2>
+  <p>Purchases and restores of the Premium Plan are processed by Apple's App Store. The developer never receives your payment information. Your purchase status is stored on your device.</p>
+
+  <h2>7. Backups</h2>
+  <p>A collection backup is exported as a file only when you choose to, to a location you select.</p>
+
+  <h2>8. Third Parties</h2>
+  <p>Other than the transmissions to the services described above, the app does not share any information with third parties.</p>
+
+  <h2>9. Contact</h2>
   <p>For questions about this policy, please use our <a href="https://kunugi.notion.site/303e203271ae81019647e383c7215a36">contact page</a>.</p>
 
-  <p class="updated">Last updated: June 28, 2026</p>
+  <p class="updated">Last updated: November 22, 2026</p>
 </body>
 </html>
