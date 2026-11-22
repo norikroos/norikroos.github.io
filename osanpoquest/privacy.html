@@ -35,7 +35,7 @@
   <p>本アプリは、目的地の選定と、目的地までの距離・方角の計算のために端末の位置情報を使用します。</p>
   <ul>
     <li>目的地の候補を探すため、現在地の座標を次の外部サービスに送信し、周辺の地点情報を取得します：OpenStreetMap の Overpass API（overpass-api.de、および混雑時の公開ミラー maps.mail.ru）、Yahoo! JAPAN の YOLP ローカルサーチ API。</li>
-    <li>カードに市区町村名を表示するため、到着地点の座標を Apple の位置情報サービスで住所に変換します。地図の表示には Apple マップを使用します。</li>
+    <li>カードに市区町村名を表示するため、到着地点の座標を住所に変換します（iPhone では Apple の位置情報サービス、Android では端末の位置情報サービス（Google）を使用します）。地図の表示には、iPhone では Apple マップ、Android では OpenStreetMap の地図タイル（tile.openstreetmap.org）を使用します。地図タイルの取得では、表示している範囲がタイルの提供元に送信されます。</li>
   </ul>
   <p>これらの送信は検索・変換の処理のためだけに行われ、開発者が位置情報を受け取ったり保存したりすることはありません。各サービスでの取り扱いは、それぞれの提供者のポリシーに従います。散歩の経路は端末内にのみ記録されます。</p>
 
@@ -46,13 +46,13 @@
   <p>到着した場所のコレクションカードを作成するために、任意でカメラや写真ライブラリを使用します。撮影・選択した写真は端末内にのみ保存され、外部に送信されることはありません。カード画像の共有・保存は、お客様が操作したときにのみ行われます。</p>
 
   <h2>5. 広告について</h2>
-  <p>本アプリは Google AdMob によるバナー広告を表示します。AdMob は広告の配信・計測・分析のために、IP アドレスから推定するおおまかな位置情報、端末の識別子、広告の表示やタップなどの利用状況、診断情報を取得することがあります。本アプリはトラッキング許可の確認（ATT）を表示せず、広告識別子（IDFA）を用いたトラッキングは行いません。詳しくは <a href="https://policies.google.com/technologies/partner-sites">Google のポリシー</a>をご確認ください。プレミアムプランをご購入いただくと広告は表示されません。</p>
+  <p>本アプリは Google AdMob によるバナー広告を表示します。AdMob は広告の配信・計測・分析のために、IP アドレスから推定するおおまかな位置情報、端末の識別子、広告の表示やタップなどの利用状況、診断情報を取得することがあります。本アプリはトラッキング許可の確認（ATT）を表示せず、広告識別子（iPhone の IDFA、Android の広告 ID）を用いたトラッキングは行いません。詳しくは <a href="https://policies.google.com/technologies/partner-sites">Google のポリシー</a>をご確認ください。プレミアムプランをご購入いただくと広告は表示されません。</p>
 
-  <h2>6. App 内課金について</h2>
-  <p>プレミアムプランの購入・復元は Apple の App Store を通じて行われます。開発者が支払い情報を受け取ることはありません。購入状態は端末内に保存されます。</p>
+  <h2>6. アプリ内課金について</h2>
+  <p>プレミアムプランの購入・復元は Apple の App Store（iPhone）または Google Play（Android）を通じて行われます。開発者が支払い情報を受け取ることはありません。購入状態は端末内に保存されます。</p>
 
   <h2>7. バックアップについて</h2>
-  <p>図鑑のバックアップは、お客様が操作したときにのみファイルとして書き出され、保存先はお客様が選択します。</p>
+  <p>図鑑のバックアップは、お客様が操作したときにのみファイルとして書き出され、保存先はお客様が選択します。なお Android では、端末の設定により、アプリのデータが Android の自動バックアップ機能でお客様の Google アカウントに保存される場合があります（開発者はその内容を受け取りません）。</p>
 
   <h2>8. 第三者提供</h2>
   <p>上記の外部サービスへの送信を除き、本アプリが取得した情報を第三者へ提供することはありません。</p>
@@ -74,7 +74,7 @@
   <p>The app uses your device's location to pick a destination and to calculate the distance and direction to it.</p>
   <ul>
     <li>To find candidate destinations, the app sends your current coordinates to the following services to retrieve nearby places: the OpenStreetMap Overpass API (overpass-api.de, and the public mirror maps.mail.ru when the main server is busy) and the Yahoo! JAPAN YOLP Local Search API.</li>
-    <li>To show the city name on a card, the arrival coordinates are converted to an address using Apple's location services. Maps are displayed with Apple Maps.</li>
+    <li>To show the city name on a card, the arrival coordinates are converted to an address (on iPhone using Apple's location services; on Android using the device's location services provided by Google). Maps are shown with Apple Maps on iPhone and with OpenStreetMap tiles (tile.openstreetmap.org) on Android; loading map tiles sends the displayed area to the tile provider.</li>
   </ul>
   <p>These requests are made only to perform the search or conversion; the developer never receives or stores your location. Each service handles data under its own provider's policy. Your walk route is recorded only on your device.</p>
 
@@ -85,13 +85,13 @@
   <p>You may optionally use the camera or photo library to create a collection card for a place you reach. Photos are stored only on your device and are never transmitted. Card images are shared or saved only when you choose to do so.</p>
 
   <h2>5. Advertising</h2>
-  <p>The app displays banner ads via Google AdMob. To deliver, measure, and analyze ads, AdMob may collect approximate location derived from your IP address, device identifiers, ad interactions such as views and taps, and diagnostic data. The app does not show an App Tracking Transparency prompt and does not track you using the advertising identifier (IDFA). For details, see <a href="https://policies.google.com/technologies/partner-sites">Google's policy</a>. Ads are not shown to Premium Plan users.</p>
+  <p>The app displays banner ads via Google AdMob. To deliver, measure, and analyze ads, AdMob may collect approximate location derived from your IP address, device identifiers, ad interactions such as views and taps, and diagnostic data. The app does not show an App Tracking Transparency prompt and does not track you using the advertising identifier (IDFA on iPhone, Advertising ID on Android). For details, see <a href="https://policies.google.com/technologies/partner-sites">Google's policy</a>. Ads are not shown to Premium Plan users.</p>
 
   <h2>6. In-App Purchase</h2>
-  <p>Purchases and restores of the Premium Plan are processed by Apple's App Store. The developer never receives your payment information. Your purchase status is stored on your device.</p>
+  <p>Purchases and restores of the Premium Plan are processed by Apple's App Store (iPhone) or Google Play (Android). The developer never receives your payment information. Your purchase status is stored on your device.</p>
 
   <h2>7. Backups</h2>
-  <p>A collection backup is exported as a file only when you choose to, to a location you select.</p>
+  <p>A collection backup is exported as a file only when you choose to, to a location you select. On Android, depending on your device settings, app data may be saved to your Google account by Android's automatic backup (the developer does not receive it).</p>
 
   <h2>8. Third Parties</h2>
   <p>Other than the transmissions to the services described above, the app does not share any information with third parties.</p>
